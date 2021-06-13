@@ -1,0 +1,21 @@
+{
+  "name": "wg-public-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index",
+  "typings": "lib/index",
+  "scripts": {
+    "build": "tsc -p . ",
+	"prepublish": "tsc -p . "
+  },
+  "keywords": [],
+  "author": "Karolis Scerbiakas",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/node": "^15.12.2",
+    "axios": "^0.21.1"
+  }
+}
