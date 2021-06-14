@@ -33,7 +33,7 @@ const listofMetrics = await metrics.index(
 	},
     // filtering by fields
 	{
-	  impressions: '18310', // TODO greaten/less than or equal to
+	  impressions: '18310', // TODO greater/less than or equal to
 	},
 );
 
