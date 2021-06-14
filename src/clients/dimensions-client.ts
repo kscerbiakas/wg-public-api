@@ -1,6 +1,4 @@
-import { IIntegrationDimension } from "../interfaces";
-import { Client } from "./abstract-client";
+import { Client } from './abstract-client';
+import { IIntegrationDimension } from '@interfaces/entities';
 
-export class DimensionsClient extends Client<IIntegrationDimension> {
-
-}
+export class DimensionsClient extends Client<IIntegrationDimension> {}

@@ -4,13 +4,28 @@
 	"module": "commonjs",
 	"target": "es5",
 	"sourceMap": false,
-	"outDir": "lib"
+	"outDir": "lib",
+	"baseUrl": ".",
+	"paths": {
+	  "@interfaces/*": [
+		"src/interfaces/*"
+	  ],
+	  "@services/*": [
+		"src/services/*",
+	  ],
+	  "@errors/*": [
+		"src/errors/*"
+	  ],
+	  "@clients/*": [
+		"src/clients/*"
+	  ]
+	}
   },
   "include": [
 	"src"
   ],
   "exclude": [
 	"lib",
-	"node_modules",
-  ]
+	"node_modules"
+  ],
 }
