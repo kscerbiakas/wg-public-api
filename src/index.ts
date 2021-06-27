@@ -1,7 +1,5 @@
-import { MetricClient } from '@clients/metric-client';
-import { HttpService } from '@services/http.service';
-import { DimensionsClient } from '@clients/dimensions-client';
-import { IntegrationSourceDataClient } from '@clients/integration-source-data-client';
+import { DimensionsClient, IntegrationSourceDataClient, MetricClient } from "./clients";
+import { HttpService } from "./services/http.service";
 
 class WgClient {
   constructor(private key: string) {}

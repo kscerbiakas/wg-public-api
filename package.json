@@ -1,13 +1,13 @@
 {
   "name": "wg-public-api",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "",
   "main": "lib/index",
   "typings": "lib/index",
   "scripts": {
     "build": "tsc -p . ",
     "prepublish": "tsc -p . ",
-	"format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "keywords": [],
   "author": "Karolis Scerbiakas",

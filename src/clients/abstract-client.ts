@@ -1,5 +1,5 @@
-import { HttpService } from '@services/http.service';
-import { IListResponse, IPaging, ISort } from '@interfaces/response';
+import { HttpService } from "../services/http.service";
+import { IListResponse, IPaging, ISort } from "../interfaces";
 
 export abstract class Client<T> {
   constructor(protected httpService: HttpService) {}

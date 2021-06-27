@@ -1,5 +1,5 @@
 import { Client } from './abstract-client';
-import { IIntegrationMetric } from '@interfaces/entities';
+import { IIntegrationMetric } from "../interfaces";
 
 export class MetricClient extends Client<IIntegrationMetric> {
   async post(metric: IIntegrationMetric): Promise<IIntegrationMetric> {

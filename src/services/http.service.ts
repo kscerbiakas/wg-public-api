@@ -1,11 +1,8 @@
 import * as https from 'https';
 import axios, { AxiosInstance } from 'axios';
-import { IBaseEntity } from '@interfaces/entities/base.entity';
-import { EntityAlreadyExistsError } from '@errors/entity-already-exists.error';
-import { IListResponse, IPaging, IResponse, ISort } from '@interfaces/response';
-import { UnauthorizedError } from '@errors/unauthorized.error';
-import { EntityNotFoundError } from '@errors/entity-not-found.error';
-import { ValidationError } from '@errors/validation.error';
+import { IListResponse, IPaging, IResponse, ISort } from "../interfaces";
+import { IBaseEntity } from "../interfaces/entities/base.entity";
+import { UnauthorizedError, EntityNotFoundError, EntityAlreadyExistsError, ValidationError } from "../errors";
 
 export class HttpService {
   axios: AxiosInstance;
