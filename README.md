@@ -84,8 +84,8 @@ const dimension = await dimensions.create({
 })
 // update
 const updatedDimension = await dimensions.update(3815, {
-	external_id: 'bananas',
-	name: 'Bananas',
+	external_id: 'block_size',
+	name: 'Block size',
 	type: 'string',
 });
 
