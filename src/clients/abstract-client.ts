@@ -1,5 +1,5 @@
-import { HttpService } from "../services/http.service";
-import { IListResponse, IPaging, ISort } from "../interfaces";
+import { HttpService } from '../services/http.service';
+import { IListResponse, IPaging, ISort } from '../interfaces';
 
 export abstract class Client<T> {
   constructor(protected httpService: HttpService) {}
@@ -24,7 +24,7 @@ export abstract class Client<T> {
     return this.httpService.put<T>({ id: id }, entity);
   }
 
-  async delete(id: number): Promise<boolean> {
+  async delete(id: number | string): Promise<boolean> {
     return this.httpService.delete(id);
   }
 }

@@ -1,23 +1,23 @@
-import * as https from 'https';
 import axios, { AxiosInstance } from 'axios';
-import { IListResponse, IPaging, IResponse, ISort } from "../interfaces";
-import { IBaseEntity } from "../interfaces/entities/base.entity";
-import { UnauthorizedError, EntityNotFoundError, EntityAlreadyExistsError, ValidationError } from "../errors";
+import { IListResponse, IPaging, IResponse, ISort } from '../interfaces';
+import { IBaseEntity } from '../interfaces/entities/base.entity';
+import {
+  UnauthorizedError,
+  EntityNotFoundError,
+  EntityAlreadyExistsError,
+  ValidationError,
+} from '../errors';
 
 export class HttpService {
   axios: AxiosInstance;
 
   constructor(private key: string, private uri: string) {
-    const agent = new https.Agent({
-      rejectUnauthorized: false,
-    });
     this.axios = axios.create({
       baseURL: 'https://api.whatagraph.com/',
       headers: {
         Authorization: `Bearer ${this.key}`,
         accept: 'application/json',
       },
-      httpsAgent: agent,
     });
   }
 

@@ -1,3 +1,4 @@
+## CRUD wrapper around WG Public API 
 ### Usage
 
 ```typescript
@@ -22,22 +23,22 @@ const metric = await metrics.post({
 
 
 await metrics.index();
-await metrics.index(
-	// pagination
+const metricIndex = await metrics.index(
 	{
 		page: 2,
 		per_page: 1,
 	},
-	// sorting
 	{
 		field: 'id',
 		direction: 'desc',
 	},
-	// filtering by fields
 	{
 		impressions: '18310', // TODO greater/less than or equal to
 	},
 );
+
+metricIndex.data // to access metric list 
+
 
 await metrics.update (123, {
 	name: 'impressions',
@@ -56,33 +57,27 @@ await metrics.update (123, {
 ```typescript
 const dimensions = client.dimensions ();
 
-// list of dimensions.
-// also accepts same  params as metrics above for p
 await dimensions.index(); 
 await dimensions.index(
-	// pagination
 	{
 		page: 2,
 		per_page: 1,
 	},
-	// sorting
 	{
 		field: 'id',
 		direction: 'desc',
 	},
-	// filtering by fields
 	{
 		device_size: 'small',
 	},
 );
 
-// create new
 const dimension = await dimensions.create({
 	external_id: 'device_size',
 	name: 'Device size',
 	type: 'string',
 })
-// update
+
 const updatedDimension = await dimensions.update(3815, {
 	external_id: 'block_size',
 	name: 'Block size',
@@ -117,6 +112,7 @@ await integrationData.update('AASF123', {
 		date: '2020-01-20',
 	},
 });
+
 
 await integrationData.delete('AASF123');
 ```

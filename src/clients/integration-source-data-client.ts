@@ -1,5 +1,5 @@
 import { Client } from './abstract-client';
-import { IIntegrationSourceDataPoint } from "../interfaces";
+import { IIntegrationSourceDataPoint } from '../interfaces';
 
 export class IntegrationSourceDataClient extends Client<IIntegrationSourceDataPoint> {
   async post(
